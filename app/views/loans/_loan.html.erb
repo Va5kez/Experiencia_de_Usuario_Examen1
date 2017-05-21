@@ -1,0 +1,7 @@
+<tr>
+  <td><%= link_to loan.id, loan_path(loan.id) %></td>
+  <td><%= loan.client_name %></td>
+  <td><%= loan.amount %></td>
+  <td><%= link_to "Agregar", new_loan_payment_path(loan.id) %></td>
+  <td><%= link_to "Borrar", loan,class: "btn btn-default", method: :delete, data: {confirm: "Eliminar Prestamo?"} %></td>
+</tr>

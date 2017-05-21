@@ -1,0 +1,20 @@
+<%= form_for(prestamo) do |f| %>
+<center>
+<div class="form-group form-inline" align="center">
+  <b><%= f.label :client_name, "Nombre del Cliente:" %></b>
+  <%= f.text_field :client_name, size: 25,  class: "form-control" %>
+</div>
+<div class="form-group form-inline" allign="center">
+  <b><%= f.label :amount, "Monto del Prestamo:" %></b>
+  <%= f.text_field :amount, size: 25,  class: "form-control" %>
+</div>
+<div class="form-group form-inline" allign="center">
+  <b><%= f.label :loan_type, "Tipo del Prestamo :" %></b>
+  <%= f.select :loan_type, ['AUTO', 'VIVIENDA', 'PERSONAL'], class: "dropdown" , style:"240px"%>
+</div>
+<div class="btn-group" role="group">
+    <%= f.submit "  SAVE  " ,class: "btn btn-primary" %>
+    <%= link_to "CANCEL",loans_path, class: "btn btn-primary" %>
+</div></center>
+
+<%end%>

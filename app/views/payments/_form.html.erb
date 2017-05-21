@@ -1,0 +1,15 @@
+<%= form_for [@loan,payment] do |f| %>
+
+<center>
+    <div class="form-group form-inline" align="center" >
+      <center><b><%= f.label :amount, "Monto a pagar :" %></b></center>
+      <%= f.text_field :amount, size: 25,  class: "form-control" %>
+    </div>
+    <br>
+    <div class="btn-group" role="group">
+        <%= f.submit "SAVE" ,class: "btn btn-primary btn-block" %>
+        <%= link_to "CANCEL",prestamos_path, class: "btn btn-primary btn-block" %>
+    </div>
+</center>
+
+<%end%>
